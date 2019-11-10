@@ -1,4 +1,4 @@
-# Version 1.0.1
+# Version 1.0.2
 
 FROM jeromeklam/u18
 MAINTAINER Jérôme KLAM, "jeromeklam@free.fr"
@@ -42,10 +42,10 @@ RUN a2enmod mpm_event
 COPY ./docker/supervisord.conf /etc/supervisor/conf.d/apache.conf
 
 ## Ssh key for git
-ADD ./docker/ssh /root/.ssh
-RUN chmod 700 /root/.ssh
-RUN chmod 600 /root/.ssh/id_rsa
-RUN chmod 644 /root/.ssh/id_rsa.pub
+#ADD ./docker/ssh /root/.ssh
+#RUN chmod 700 /root/.ssh
+#RUN chmod 600 /root/.ssh/id_rsa
+#RUN chmod 644 /root/.ssh/id_rsa.pub
 
 ## Bower & grunt
 #RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
