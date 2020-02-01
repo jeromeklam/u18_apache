@@ -34,6 +34,7 @@ RUN a2enmod env
 RUN a2enmod rewrite
 RUN a2enmod headers
 RUN a2enmod proxy_fcgi
+RUN a2enmod proxy_wstunnel
 RUN a2enmod setenvif
 RUN a2dismod mpm_prefork
 RUN a2enmod mpm_event 

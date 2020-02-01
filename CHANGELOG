@@ -1,17 +1,21 @@
-# 1.0.5 : 15/12/2018
+# 1.0.7 : 01/02/2020
+
+* proxy_wstunnel
+
+# 1.0.5 : 15/12/2019
 
 * AutoLogin header
 
-# 1.0.4 : 11/11/2018
+# 1.0.4 : 11/11/2019
 
 * Authorization header
 * SERVERNAME
 
-# 1.0.3 : 11/11/2018
+# 1.0.3 : 11/11/2019
 
 * Correction des en-têtes
 
-# 1.0.2 : 10/11/2018
+# 1.0.2 : 10/11/2019
 
 * Suppression des clefs ssh
 
