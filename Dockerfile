@@ -1,4 +1,4 @@
-# Version 1.0.3
+# Version 1.0.8
 
 FROM jeromeklam/u18
 MAINTAINER Jérôme KLAM, "jeromeklam@free.fr"
@@ -33,7 +33,9 @@ RUN sed -e 's/# Global configuration/# Global configuration\nServerName localhos
 RUN a2enmod env
 RUN a2enmod rewrite
 RUN a2enmod headers
+RUN a2enmod proxy
 RUN a2enmod proxy_fcgi
+RUN a2enmod proxy_http
 RUN a2enmod proxy_wstunnel
 RUN a2enmod setenvif
 RUN a2dismod mpm_prefork
@@ -41,19 +43,6 @@ RUN a2enmod mpm_event
 
 # Supervisor
 COPY ./docker/supervisord.conf /etc/supervisor/conf.d/apache.conf
-
-## Ssh key for git
-#ADD ./docker/ssh /root/.ssh
-#RUN chmod 700 /root/.ssh
-#RUN chmod 600 /root/.ssh/id_rsa
-#RUN chmod 644 /root/.ssh/id_rsa.pub
-
-## Bower & grunt
-#RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
-#RUN apt-get install -y nodejs
-#RUN npm install -g --unsafe-perm bower grunt
-#RUN npm install -g --unsafe-perm dredd 
-#RUN npm install -g --unsafe-perm aglio
 
 ## On expose le port 80 et 443
 EXPOSE 80
