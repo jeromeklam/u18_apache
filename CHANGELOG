@@ -1,3 +1,7 @@
+# 1.0.10 : 08/06/2020
+
+* Api-Id in vhost headers
+
 # 1.0.9 : 31/05/2020
 
 * ws config & modules
